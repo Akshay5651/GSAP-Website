@@ -100,103 +100,159 @@ function sec4Animation() {
 
 function sec5Animation() {
 
-    gsap.from(".section5 p, .section5 .heading", {
-        y: 8,
-        opacity: 0,
-        duration: 0.8,
-        ease: "none",
+    var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".section5",
-            start: "top 40",
-            end: "20"
+            duration: 2.5,
+            start: "top 40%",
+            end: "top -60%",
+            scrub: 3,
+            ease: "none"
         }
     })
 
-    gsap.from(".section5 .card", {
+    tl.from(".section5 p, .section5 .heading", {
         y: 8,
         opacity: 0,
-        duration: 1.8,
-        ease: "none",
-        stagger: 0.5,
-        scrollTrigger: {
-            trigger: ".section5",
-            start: "top -60",
-            end: "20"
-        }
+        duration: 1
     })
+
+    tl.from(".card1.left", {
+        x: -300,
+        opacity: 0,
+        duration: 1
+    }, "anim1")
+
+    tl.from(".card2.right", {
+        x: 300,
+        opacity: 0,
+        duration: 1
+    }, "anim1")
+
+    tl.from(".card3.left", {
+        x: -300,
+        opacity: 0,
+        duration: 1,
+        delay: 1
+    }, "anim2")
+
+    tl.from(".card4.right", {
+        x: 300,
+        opacity: 0,
+        duration: 1,
+        delay: 1
+    }, "anim2")
 }
 
 function sec6Animation() {
 
-    gsap.from(".section6 p", {
-        y: 8,
-        opacity: 0,
-        duration: 0.8,
-        ease: "none",
+    var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".section6",
-            start: "top 10%",
-            end: "top 80%",
-            scrub: 1
+            start: "top 20%",
+            end: "top -40%",
+            ease: "none",
+            scrub: 10
         }
     })
 
-    gsap.from(".section6 .cards", {
-        y: 8,
-        opacity: 0,
-        duration: 0.8,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".section6 .cards",
-            start: "top 50%",
-            end: "top 80%",
-            scrub: 1
-        }
+    tl.from(".section6 p", {
+        y: 28,
+        duration: 1,
+        opacity: 0
+    })
+
+    tl.from(".section6 .cards #card1", {
+        y: 150,
+        duration: 1,
+        opacity: 0
+    })
+
+    tl.from(".section6 .cards #card2", {
+        y: 150,
+        duration: 1,
+        opacity: 0
+    })
+
+    tl.from(".section6 .cards #card3", {
+        y: 150,
+        duration: 1,
+        opacity: 0
+    })
+
+    tl.from(".section6 .cards #card4", {
+        y: 150,
+        duration: 1,
+        delay: 1,
+        opacity: 0
+    })
+
+    tl.from(".section6 .cards #card5", {
+        y: 150,
+        duration: 1,
+        opacity: 0
+    })
+
+    tl.from(".section6 .cards #card6", {
+        y: 150,
+        duration: 1,
+        opacity: 0
     })
 }
 
 function sec7Animation() {
 
-    gsap.from(".section7 #right", {
-        y: 8,
-        opacity: 0,
-        duration: 1,
-        ease: "none",
+    var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".section7",
             start: "top 50%",
-            end: "top 10",
-            scrub: 0.4
+            end: "top 0%",
+            ease: "none",
+            scrub: 3
         }
     })
+
+    tl.from(".section7 #right #top", {
+        y: -40,
+        opacity: 0,
+        duration: 2
+    })
+
+    tl.from(".section7 #right #bottom .left", {
+        x: -40,
+        opacity: 0,
+        duration: 1
+    }, "anime1")
+
+    tl.from(".section7 #right #bottom .right", {
+        x: 40,
+        opacity: 0,
+        duration: 1
+    }, "anime1")
 }
 
 function sec8Animation() {
 
-    gsap.from(".section8 p, .section8 #top", {
-        y: 8,
-        opacity: 0,
-        duration: 1,
-        ease: "none",
+    var tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".section8",
             start: "top 50%",
-            end: "top 10",
-            scrub: 0.4
+            end: "top -10%",
+            ease: "none",
+            scrub: 3
         }
     })
 
-    gsap.from(".section8 .cards", {
-        y: 8,
+    tl.from(".section8 p, .section8 #top", {
+        y: 20,
         opacity: 0,
-        duration: 1,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".section8 .cards",
-            start: "top 50%",
-            end: "top 10",
-            scrub: 0.4
-        }
+        duration: 1
+    })
+
+    tl.from(".section8 .cards", {
+        y: 40,
+        opacity: 0,
+        duration: 1
     })
 }
 

@@ -52,6 +52,10 @@ body {
   object-position: center;
 }
 
+#nav1 h1 {
+  cursor: not-allowed;
+}
+
 #nav1 button {
   font-size: 13px;
   padding: 8px 15px;
@@ -59,6 +63,11 @@ body {
   background-color: #f1e3d6da;
   border-radius: 20px;
   border: none;
+}
+
+#nav1 button:hover {
+  cursor: pointer;
+  background-color: #f0d9c3da;
 }
 
 nav #nav2 {
